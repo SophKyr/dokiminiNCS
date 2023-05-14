@@ -52,7 +52,7 @@ var textureToShow = 0;
        
 	    
 // Then load the texture
-var texture0 = loader.load(arr[textureToShow], function(tex) {
+loader.load(arr[textureToShow], function(tex) {
  // Once the texture has loaded
  // Asign it to the material
 material0.map = tex;
@@ -83,7 +83,7 @@ const nextButton = document.querySelector("#nextButton");
 			textureToShow = 0;
   		}
 	 anchor0.group.add(plane0); 
-         renderer.render(scene, camera);
+         //renderer.render(scene, camera);
  	});
 });
 	        

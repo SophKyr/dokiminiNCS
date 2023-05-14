@@ -58,7 +58,8 @@ anchor0.group.add(plane0);
 	    //nextButton	    
 var nextButton0 = document.querySelector("#nextButton"); 
 	nextButton0.addEventListener("click", function() {
-		document.getElementById("hahaha").innerHTML = "ΛΕΣΧΗ";
+		document.getElementById("hahaha").innerHTML = "Φοιτητική Λέσχη Ιονίου Πανεπιστημίου";
+		document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε *insert elevator music*";
 		loader0.load(arr0[textureToShow0], function(tex) {
 		material0.map = tex;
 		textureToShow0++;
@@ -85,6 +86,269 @@ var backButton0 = document.querySelector("#backButton");
 			document.getElementById("picno").innerHTML = textureToShow0;
 		});
     
+	    
+//Avarts
+	    
+// The textures to use
+var arr1 = [
+ 'assets/jpg/avarts/ava1.jpg',
+ 'assets/jpg/avarts/ava2.jpg',
+ 'assets/jpg/avarts/ava3.jpg',
+ 'assets/jpg/avarts/ava4.jpg',
+ 'assets/jpg/avarts/ava5.jpg',
+ 'assets/jpg/avarts/ava6.jpg',
+ 'assets/jpg/avarts/ava7.jpg',
+ 'assets/jpg/avarts/ava8.jpg',
+ 'assets/jpg/avarts/ava9.jpg',	
+];
+var textureToShow1 = 0;
+   	    
+// instantiate a texture loader
+var loader1 = new THREE.TextureLoader();
+ 	    	    
+      const anchor1 = mindarThree.addAnchor(1); 
+      var texture1 = loader1.load (arr1[textureToShow1]);
+      var geometry1 = new THREE.PlaneGeometry(1, 1.7);
+      var material1 = new THREE.MeshBasicMaterial({map: texture1});
+      var plane1 = new THREE.Mesh(geometry1, material1);
+       	    
+// Then load the texture
+ var texture1 = loader1.load(arr1[textureToShow1], function(tex) {
+ // Once the texture has loaded
+ // Asign it to the material
+ material1.map = tex;
+ // Update the next texture to show
+ textureToShow1++;
+});
+  // Add the mesh into the scene
+anchor1.group.add(plane1);
+
+	    //nextButton	    
+var nextButton1 = document.querySelector("#nextButton"); 
+	nextButton1.addEventListener("click", function() {
+		document.getElementById("hahaha").innerHTML = "Τμήμα Τεχνών Ήχου και Εικόνας - Γραμματεία";
+		document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε *insert elevator music*";
+		loader1.load(arr1[textureToShow1], function(tex) {
+		material1.map = tex;
+		textureToShow1++;
+		if(textureToShow1 > arr1.length-1) {
+			textureToShow1 = 0;
+  		}
+ 	});
+document.getElementById("picno").innerHTML = textureToShow1;
+//anchor0.group.add(plane0); 
+});
+	        
+//backButton	    
+var backButton1 = document.querySelector("#backButton");
+	backButton1.addEventListener("click", () => {
+		 
+		textureToShow1--;
+		
+			if(textureToShow1 < 0) {
+				textureToShow1 = arr1.length - 1;
+			}
+			loader1.load(arr1[textureToShow1], function(tex) {
+				material1.map = tex;
+			})
+			document.getElementById("picno").innerHTML = textureToShow1;
+		});	    
+	    
+	    
+//ΠΛΗΡΟΦΟΡΙΚΗ
+	    
+// The textures to use
+var arr2 = [
+ 'assets/jpg/pliroforiki/pl1.jpg',
+ 'assets/jpg/pliroforiki/pl2.jpg',
+ 'assets/jpg/pliroforiki/pl3.jpg',	
+ 'assets/jpg/pliroforiki/pl4.jpg',
+ 'assets/jpg/pliroforiki/pl5.jpg',
+ 'assets/jpg/pliroforiki/pl6.jpg',
+	
+];
+var textureToShow2 = 0;
+   	    
+// instantiate a texture loader
+var loader2 = new THREE.TextureLoader();
+ 	    	    
+      const anchor2 = mindarThree.addAnchor(2); 
+      var texture2 = loader2.load (arr2[textureToShow2]);
+      var geometry2 = new THREE.PlaneGeometry(1, 1.7);
+      var material2 = new THREE.MeshBasicMaterial({map: texture2});
+      var plane2 = new THREE.Mesh(geometry2, material2);
+       	    
+// Then load the texture
+ var texture2 = loader2.load(arr2[textureToShow2], function(tex) {
+ // Once the texture has loaded
+ // Asign it to the material
+ material2.map = tex;
+ // Update the next texture to show
+ textureToShow2++;
+});
+  // Add the mesh into the scene
+anchor2.group.add(plane2);
+
+	    //nextButton	    
+var nextButton2 = document.querySelector("#nextButton"); 
+	nextButton2.addEventListener("click", function() {
+		document.getElementById("hahaha").innerHTML = " Κτήριο Αρεταίος- Τμήμα Πληροφορικής";
+		document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε *insert elevator music*";
+		loader2.load(arr2[textureToShow2], function(tex) {
+		material2.map = tex;
+		textureToShow2++;
+		if(textureToShow2 > arr2.length-1) {
+			textureToShow2 = 0;
+  		}
+ 	});
+document.getElementById("picno").innerHTML = textureToShow2;
+//anchor0.group.add(plane0); 
+});
+	        
+//backButton	    
+var backButton2 = document.querySelector("#backButton");
+	backButton2.addEventListener("click", () => {
+		 
+		textureToShow2--;
+		
+			if(textureToShow2 < 0) {
+				textureToShow2 = arr2.length - 1;
+			}
+			loader2.load(arr2[textureToShow2], function(tex) {
+				material2.map = tex;
+			})
+			document.getElementById("picno").innerHTML = textureToShow2;
+		});	
+	    
+	   
+	    
+//Εργαστηρια
+	    
+// The textures to use
+var arr3 = [
+ 'assets/jpg/erga/erga1.jpg',
+ 'assets/jpg/erga/erga2.jpg',
+ 'assets/jpg/erga/erga3.jpg',	
+ 'assets/jpg/erga/erga4.jpg',
+ 'assets/jpg/erga/erga5.jpg',
+ 'assets/jpg/erga/erga6.jpg',
+ 'assets/jpg/erga/erga7.jpg',
+ 'assets/jpg/erga/erga8.jpg',
+ 'assets/jpg/erga/erga9.jpg',	
+];
+var textureToShow3 = 0;
+   	    
+// instantiate a texture loader
+var loader3 = new THREE.TextureLoader();
+ 	    	    
+      const anchor3 = mindarThree.addAnchor(3); 
+      var texture3= loader3.load (arr3[textureToShow3]);
+      var geometry3 = new THREE.PlaneGeometry(1, 1.7);
+      var material3 = new THREE.MeshBasicMaterial({map: texture3});
+      var plane3 = new THREE.Mesh(geometry3, material3);
+       	    
+// Then load the texture
+ var texture3 = loader3.load(arr3[textureToShow3], function(tex) {
+ // Once the texture has loaded
+ // Asign it to the material
+ material3.map = tex;
+ // Update the next texture to show
+ textureToShow3++;
+});
+  // Add the mesh into the scene
+anchor3.group.add(plane3);
+
+	    //nextButton	    
+var nextButton3 = document.querySelector("#nextButton"); 
+	nextButton3.addEventListener("click", function() {
+		document.getElementById("hahaha").innerHTML = "Γραμματεία Πληροφορικής- Εργαστήρια";
+		document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε *insert elevator music*";
+		loader3.load(arr3[textureToShow3], function(tex) {
+		material3.map = tex;
+		textureToShow3++;
+		if(textureToShow3 > arr3.length-1) {
+			textureToShow3 = 0;
+  		}
+ 	});
+document.getElementById("picno").innerHTML = textureToShow3;
+//anchor0.group.add(plane0); 
+});
+	        
+//backButton	    
+var backButton3 = document.querySelector("#backButton");
+	backButton3.addEventListener("click", () => {
+		 
+		textureToShow3--;
+		
+			if(textureToShow3 < 0) {
+				textureToShow3 = arr3.length - 1;
+			}
+			loader3.load(arr2[textureToShow3], function(tex) {
+				material3.map = tex;
+			})
+			document.getElementById("picno").innerHTML = textureToShow3;
+		});    
+	    
+//Μεταφραστικό
+	    
+// The textures to use
+var arr4 = [
+ 'assets/jpg/meta/meta1.jpg',
+ 'assets/jpg/meta/meta2.jpg',
+ 'assets/jpg/meta/meta3.jpg',
+];
+var textureToShow4 = 0;
+   	    
+// instantiate a texture loader
+var loader4 = new THREE.TextureLoader();
+ 	    	    
+      const anchor4 = mindarThree.addAnchor(4); 
+      var texture4= loader4.load (arr4[textureToShow4]);
+      var geometry4 = new THREE.PlaneGeometry(1, 1.7);
+      var material4 = new THREE.MeshBasicMaterial({map: texture4});
+      var plane4 = new THREE.Mesh(geometry4, material4);
+       	    
+// Then load the texture
+ var texture4 = loader4.load(arr4[textureToShow4], function(tex) {
+ // Once the texture has loaded
+ // Asign it to the material
+ material4.map = tex;
+ // Update the next texture to show
+ textureToShow4++;
+});
+  // Add the mesh into the scene
+anchor4.group.add(plane4);
+
+	    //nextButton	    
+var nextButton4 = document.querySelector("#nextButton"); 
+	nextButton4.addEventListener("click", function() {
+		document.getElementById("hahaha").innerHTML = "Κτήριο Γαληνός- Τμήμα Ξένων γλωσσών, Μετάφρασης και Διερμηνείας";
+		document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε *insert elevator music*";
+		loader4.load(arr4[textureToShow4], function(tex) {
+		material4.map = tex;
+		textureToShow4++;
+		if(textureToShow4 > arr4.length-1) {
+			textureToShow4 = 0;
+  		}
+ 	});
+document.getElementById("picno").innerHTML = textureToShow4;
+//anchor0.group.add(plane0); 
+});
+	        
+//backButton	    
+var backButton4 = document.querySelector("#backButton");
+	backButton4.addEventListener("click", () => {
+		 
+		textureToShow4--;
+		
+			if(textureToShow4 < 0) {
+				textureToShow4 = arr4.length - 1;
+			}
+			loader4.load(arr4[textureToShow4], function(tex) {
+				material4.map = tex;
+			})
+			document.getElementById("picno").innerHTML = textureToShow4;
+		}); 	    
 	    
       //image 2
      // const anchor1 = mindarThree.addAnchor(1);
@@ -152,7 +416,7 @@ p {text-align: center;}
     <h1 id="hahaha">Καλώς ήρθατε στο Σύστημα Πλοήγησης του Πανεπιστημίου</h1>
 	  
   
-   <p> Σαρώστε το κτίριο που θέλετε </p>	  
+   <p id="second"> Σαρώστε το κτίριο που θέλετε </p>	  
    <p> Βήμα <span id="picno">#</span></p>
 
 	   

@@ -54,12 +54,13 @@ var loader0 = new THREE.TextureLoader();
 });
   // Add the mesh into the scene
 anchor0.group.add(plane0);
-document.getElementById("hahaha").innerHTML = "ΛΕΣΧΗ";
+
 	    
 
 	    
 var nextButton0 = document.querySelector("#nextButton"); 
 	nextButton0.addEventListener("click", function() {
+		document.getElementById("hahaha").innerHTML = "ΛΕΣΧΗ";
 		loader0.load(arr0[textureToShow0], function(tex) {
 		material0.map = tex;
 		textureToShow0++;
@@ -74,7 +75,7 @@ document.getElementById("picno").innerHTML = textureToShow0;
 	    
 var backButton0 = document.querySelector("#backButton");
 	//backButton0.addEventListener("click", () => {
-		document.getElementById("hahaha").innerHTML = "pls I have changed!!!";
+		document.getElementById("hahaha").innerHTML = "ΛΕΣΧΗ";
 		textureToShow0--;
 		
 			if(textureToShow0 < 0) {
@@ -152,7 +153,7 @@ p {text-align: center;}
   <body>
     
     <h1 id="hahaha">Καλώς ήρθατε στο Σύστημα Πλοήγησης του Πανεπιστημίου</h1> 
-   <p> Σαρώστε το κτίριο που θέλετε </p>
+   <p top:150;> Σαρώστε το κτίριο που θέλετε </p>
    <p> Βήμα <span id="picno">#</span></p>
 	  
     <div id="control">

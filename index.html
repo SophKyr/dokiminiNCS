@@ -19,11 +19,11 @@
       //initiate AR object 
       const mindarThree = new MindARThree({
 	container: document.querySelector("#container"),
-	imageTargetSrc: "./assets/markers/musicband.mind"
+	imageTargetSrc: "assets/markers/markers.mind"
       });
       const {renderer, scene, camera} = mindarThree; 
 	    
-        //ΛΕΣΧΗ
+//ΛΕΣΧΗ
 	    
 // The textures to use
 var arr0 = [
@@ -34,12 +34,10 @@ var arr0 = [
  'assets/jpg/lesxi/le5.jpg',
 ];
 var textureToShow0 = 0;
-   
-	    
+   	    
 // instantiate a texture loader
 var loader0 = new THREE.TextureLoader();
- 	    
-	    
+ 	    	    
       const anchor0 = mindarThree.addAnchor(0);
      // var texture0 = loader.load(arr[textureToShow]); 
       var texture0 = new THREE.TextureLoader (arr0[textureToShow0]);

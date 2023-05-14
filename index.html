@@ -40,7 +40,7 @@ var loader0 = new THREE.TextureLoader();
  	    	    
       const anchor0 = mindarThree.addAnchor(0);
      // var texture0 = loader.load(arr[textureToShow]); 
-      var texture0 = new THREE.TextureLoader (arr0[textureToShow0]);
+      var texture0 = loader0 (arr0[textureToShow0]);
       var geometry0 = new THREE.PlaneGeometry(1, 1.7);
       var material0 = new THREE.MeshBasicMaterial({map: texture0});
       var plane0 = new THREE.Mesh(geometry0, material0);
@@ -61,7 +61,7 @@ anchor0.group.add(plane0);
 var nextButton0 = document.querySelector("#nextButton"); 
 	nextButton0.addEventListener("click", function() {
 		document.getElementById("hahaha").innerHTML = "ΛΕΣΧΗ";
-		loader.load(arr0[textureToShow0], function(tex) {
+		loader0.load(arr0[textureToShow0], function(tex) {
 		material0.map = tex;
 		textureToShow0++;
 		if(textureToShow0 > arr0.length-1) {

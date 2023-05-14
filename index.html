@@ -16,7 +16,7 @@
 	    
       import * as THREE from 'three';
       import { MindARThree } from 'mindar-image-three';
-      //initiate AR object
+      //initiate AR object 
       const mindarThree = new MindARThree({
 	container: document.querySelector("#container"),
 	imageTargetSrc: "./assets/markers/musicband.mind"
@@ -25,10 +25,7 @@
 	    
         //κτηριο 1
 	    
- // instantiate a texture loader
-var loader = new THREE.TextureLoader();
-//allow cross origin loading
-//loader.crossOrigin = '';
+ 
 	    
 // The textures to use
 var arr = [
@@ -43,19 +40,24 @@ var arr = [
 var textureToShow = 0;
    
 	    
+// instantiate a texture loader
+var loader = new THREE.TextureLoader();
+//allow cross origin loading
+//loader.crossOrigin = '';	    
+	    
       const anchor0 = mindarThree.addAnchor(0);
      // var texture0 = loader.load(arr[textureToShow]); 
       var texture0 = new THREE.TextureLoader ('assets/jpg/im1.jpg');
       var geometry0 = new THREE.PlaneGeometry(1, 1.7);
-      var material0 = new THREE.MeshBasicMaterial();
+      var material0 = new THREE.MeshBasicMaterial({map: texture0});
       var plane0 = new THREE.Mesh(geometry0, material0);
        
 	    
 // Then load the texture
-loader.load(arr[textureToShow], function(tex) {
+ var texture0 = loader.load(arr[textureToShow], function(tex) {
  // Once the texture has loaded
  // Asign it to the material
-material0.map = tex;
+ material0.map = tex;
  // Update the next texture to show
  textureToShow++;
 });
@@ -82,22 +84,23 @@ const nextButton = document.querySelector("#nextButton");
 		if(textureToShow > arr.length-1) {
 			textureToShow = 0;
   		}
-	 anchor0.group.add(plane0); 
-         //renderer.render(scene, camera);
  	});
+document.getElementById("picno").innerHTML = textureToShow;
+anchor0.group.add(plane0); 
+//renderer.render(scene, camera);
 });
 	        
 	    
-const backButton = document.querySelector("#backButton");
-	backButton.addEventListener("click", () => {
-		document.getElementById("hahaha").innerHTML = "pls I have changed!!!";
-		textureToShow++;
-		if (textureToShow>=arr.length){
-			textureToShow=0;
-		}
-		texture0 = loader.load(arr[textureToShow]);
-		THREE.MeshBasicMaterial({map: texture0});
-	});	    
+//const backButton = document.querySelector("#backButton");
+//	backButton.addEventListener("click", () => {
+//		document.getElementById("hahaha").innerHTML = "pls I have changed!!!";
+//		textureToShow++;
+//		if (textureToShow>=arr.length){
+//			textureToShow=0;
+//		}
+//		texture0 = loader.load(arr[textureToShow]);
+//		THREE.MeshBasicMaterial({map: texture0});
+//	});	    
 	    
      // const nextButton = document.querySelector("#nextButton");
      // nextButton.addEventListener("click", () => {
@@ -176,6 +179,7 @@ p {text-align: center;}
     
     <h1 id="hahaha">Welc to the Campus Navigation System</h1> 
    <p> Scan the building you want</p>
+   <p> Pic <span id="picno">#</span></p>
 	  
     <div id="control">
       <button id="startButton">Start</button>

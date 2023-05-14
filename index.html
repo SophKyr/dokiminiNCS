@@ -39,6 +39,7 @@ var textureToShow0 = 0;
 var loader0 = new THREE.TextureLoader();
  	    	    
       const anchor0 = mindarThree.addAnchor(0); 
+      document.getElementById("hahaha").innerHTML = "ΛΕΣΧΗ";
       var texture0 = loader0.load (arr0[textureToShow0]);
       var geometry0 = new THREE.PlaneGeometry(1, 1.7);
       var material0 = new THREE.MeshBasicMaterial({map: texture0});
@@ -59,7 +60,6 @@ anchor0.group.add(plane0);
 	    
 var nextButton0 = document.querySelector("#nextButton"); 
 	nextButton0.addEventListener("click", function() {
-		document.getElementById("hahaha").innerHTML = "ΛΕΣΧΗ";
 		loader0.load(arr0[textureToShow0], function(tex) {
 		material0.map = tex;
 		textureToShow0++;
@@ -73,7 +73,7 @@ document.getElementById("picno").innerHTML = textureToShow0;
 	        
 	    
 var backButton0 = document.querySelector("#backButton");
-	backButton0.addEventListener("click", () => {
+	//backButton0.addEventListener("click", () => {
 		document.getElementById("hahaha").innerHTML = "pls I have changed!!!";
 		textureToShow0--;
 		

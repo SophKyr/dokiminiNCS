@@ -42,8 +42,7 @@ var textureToShow = 0;
 	    
 // instantiate a texture loader
 var loader = new THREE.TextureLoader();
-//allow cross origin loading
-//loader.crossOrigin = '';	    
+ 	    
 	    
       const anchor0 = mindarThree.addAnchor(0);
      // var texture0 = loader.load(arr[textureToShow]); 
@@ -51,8 +50,7 @@ var loader = new THREE.TextureLoader();
       var geometry0 = new THREE.PlaneGeometry(1, 1.7);
       var material0 = new THREE.MeshBasicMaterial({map: texture0});
       var plane0 = new THREE.Mesh(geometry0, material0);
-       
-	    
+       	    
 // Then load the texture
  var texture0 = loader.load(arr[textureToShow], function(tex) {
  // Once the texture has loaded
@@ -66,7 +64,7 @@ anchor0.group.add(plane0);
 	    
 
 	    
-var nextButton = document.querySelector("#nextButton"); 
+const nextButton = document.querySelector("#nextButton"); 
 	nextButton.addEventListener("click", function() {
 		document.getElementById("hahaha").innerHTML = "pls I have changed?????";
 		loader.load(arr[textureToShow], function(tex) {
@@ -78,7 +76,6 @@ var nextButton = document.querySelector("#nextButton");
  	});
 document.getElementById("picno").innerHTML = textureToShow;
 anchor0.group.add(plane0); 
-//renderer.render(scene, camera);
 });
 	        
 	    

@@ -371,8 +371,11 @@ var backButton4 = document.querySelector("#backButton");
 	start();
       });
       stopButton.addEventListener("click", () => {
+	      document.getElementById("hahaha").innerHTML = "Καλώς ήρθατε στο Σύστημα Πλοήγησης του Πανεπιστημίου";
+	      document.getElementById("second").innerHTML = "Σαρώστε το κτίριο που θέλετε";
 	mindarThree.stop();
 	mindarThree.renderer.setAnimationLoop(null);
+	      
 	      textureToShow0 = 0;
 	      textureToShow1 = 0;
 	      textureToShow2 = 0;

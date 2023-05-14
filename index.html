@@ -150,16 +150,24 @@ p {text-align: center;}
       }
 	    
 	  #second{
+		position: fixed; 
 		top: 100;  
-	    }    
+	    } 
+	    
     </style>
  </head>
   <body>
     
-    <h1 id="hahaha">Καλώς ήρθατε στο Σύστημα Πλοήγησης του Πανεπιστημίου</h1> 
-   <p id="second"> Σαρώστε το κτίριο που θέλετε </p>
-   <p id="third"> Βήμα <span id="picno">#</span></p>
+    <h1 id="hahaha">Καλώς ήρθατε στο Σύστημα Πλοήγησης του Πανεπιστημίου</h1>
 	  
+   <div id="second">
+   <p> Σαρώστε το κτίριο που θέλετε </p>
+   </div>
+	 
+   <div id="third">	  
+   <p> Βήμα <span id="picno">#</span></p>
+   </div>
+	   
     <div id="control">
       <button id="startButton">Start</button>
       <button id="stopButton">Stop</button>
@@ -169,11 +177,11 @@ p {text-align: center;}
     </div>
 	  
 <div id="next">
-<button onclick="nexttext()" id="nextButton">Next</button>
+<button id="nextButton">Next</button>
 </div>
 	  
 <div id="back">
-<button id="backButton">back</button>
+<button id="backButton">Back</button>
 </div>
 	  
   </body>

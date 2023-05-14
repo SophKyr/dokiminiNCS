@@ -77,13 +77,13 @@ var backButton0 = document.querySelector("#backButton");
 		document.getElementById("hahaha").innerHTML = "pls I have changed!!!";
 		textureToShow0--;
 		
-			if(textureToShow < 0) {
-				textureToShow = arr.length - 1;
+			if(textureToShow0 < 0) {
+				textureToShow0 = arr0.length - 1;
 			}
-			loader.load(arr[textureToShow], function(tex) {
+			loader0.load(arr0[textureToShow0], function(tex) {
 				material0.map = tex;
 			})
-			document.getElementById("picno").innerHTML = textureToShow;
+			document.getElementById("picno").innerHTML = textureToShow0;
 		});
 
 	
@@ -152,8 +152,8 @@ p {text-align: center;}
   <body>
     
     <h1 id="hahaha">Καλώς ήρθατε στο Σύστημα Πλοήγησης του Πανεπιστημίου</h1> 
-   <p> Scan the building you want</p>
-   <p> Pic <span id="picno">#</span></p>
+   <p> Σαρώστε το κτίριο που θέλετε </p>
+   <p> Βήμα <span id="picno">#</span></p>
 	  
     <div id="control">
       <button id="startButton">Start</button>

@@ -65,17 +65,8 @@ var loader = new THREE.TextureLoader();
 anchor0.group.add(plane0);  
 	    
 
-// function nexttext(){
-//	document.getElementById("hahaha").innerHTML = "I have changed!";  
-//	textureToShow++;
-//	if (textureToShow>=arr.length){
-//		textureToShow=0;
-//	}
-//	texture0 = loader.load(arr[textureToShow]);
-//	THREE.MeshBasicMaterial({map: texture0});
-// }
 	    
-const nextButton = document.querySelector("#nextButton"); 
+var nextButton = document.querySelector("#nextButton"); 
 	nextButton.addEventListener("click", function() {
 		document.getElementById("hahaha").innerHTML = "pls I have changed?????";
 		loader.load(arr[textureToShow], function(tex) {

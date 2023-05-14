@@ -23,72 +23,71 @@
       });
       const {renderer, scene, camera} = mindarThree; 
 	    
-        //κτηριο 1
-	    
- 
+        //ΛΕΣΧΗ
 	    
 // The textures to use
-var arr = [
- 'assets/jpg/im2.jpg',
- 'assets/jpg/im3.jpg',
- 'assets/jpg/im4.jpg',
- 'assets/jpg/im6.jpg',
- 'assets/jpg/im7.jpg',
- 'assets/jpg/im8.jpg',
- 'assets/jpg/im9.jpg',
+var arr0 = [
+ 'assets/jpg/lesxi/le1.jpg',
+ 'assets/jpg/lesxi/le2.jpg',
+ 'assets/jpg/lesxi/le3.jpg',
+ 'assets/jpg/lesxi/le4.jpg',
+ 'assets/jpg/lesxi/le5.jpg',
 ];
-var textureToShow = 0;
+var textureToShow0 = 0;
    
 	    
 // instantiate a texture loader
-var loader = new THREE.TextureLoader();
+var loader0 = new THREE.TextureLoader();
  	    
 	    
       const anchor0 = mindarThree.addAnchor(0);
      // var texture0 = loader.load(arr[textureToShow]); 
-      var texture0 = new THREE.TextureLoader ('assets/jpg/im1.jpg');
+      var texture0 = new THREE.TextureLoader (arr0[textureToShow0]);
       var geometry0 = new THREE.PlaneGeometry(1, 1.7);
       var material0 = new THREE.MeshBasicMaterial({map: texture0});
       var plane0 = new THREE.Mesh(geometry0, material0);
        	    
 // Then load the texture
- var texture0 = loader.load(arr[textureToShow], function(tex) {
+ var texture0 = loader.load(arr0[textureToShow0], function(tex) {
  // Once the texture has loaded
  // Asign it to the material
  material0.map = tex;
  // Update the next texture to show
- textureToShow++;
+ textureToShow0++;
 });
   // Add the mesh into the scene
 anchor0.group.add(plane0);  
 	    
 
 	    
-const nextButton = document.querySelector("#nextButton"); 
-	nextButton.addEventListener("click", function() {
-		document.getElementById("hahaha").innerHTML = "pls I have changed?????";
-		loader.load(arr[textureToShow], function(tex) {
+var nextButton0 = document.querySelector("#nextButton"); 
+	nextButton0.addEventListener("click", function() {
+		document.getElementById("hahaha").innerHTML = "ΛΕΣΧΗ";
+		loader.load(arr0[textureToShow0], function(tex) {
 		material0.map = tex;
-		textureToShow++;
-		if(textureToShow > arr.length-1) {
-			textureToShow = 0;
+		textureToShow0++;
+		if(textureToShow0 > arr0.length-1) {
+			textureToShow0 = 0;
   		}
  	});
-document.getElementById("picno").innerHTML = textureToShow;
-anchor0.group.add(plane0); 
+document.getElementById("picno").innerHTML = textureToShow0;
+//anchor0.group.add(plane0); 
 });
 	        
 	    
-//const backButton = document.querySelector("#backButton");
-//	backButton.addEventListener("click", () => {
-//		document.getElementById("hahaha").innerHTML = "pls I have changed!!!";
-//		textureToShow++;
-//		if (textureToShow>=arr.length){
-//			textureToShow=0;
-//		}
-//		texture0 = loader.load(arr[textureToShow]);
-//		THREE.MeshBasicMaterial({map: texture0});
-//	});	    
+var backButton0 = document.querySelector("#backButton");
+	backButton0.addEventListener("click", () => {
+		document.getElementById("hahaha").innerHTML = "pls I have changed!!!";
+		textureToShow0--;
+		
+			if(textureToShow < 0) {
+				textureToShow = arr.length - 1;
+			}
+			loader.load(arr[textureToShow], function(tex) {
+				material0.map = tex;
+			})
+			document.getElementById("picno").innerHTML = textureToShow;
+		});
 	    
      // const nextButton = document.querySelector("#nextButton");
      // nextButton.addEventListener("click", () => {

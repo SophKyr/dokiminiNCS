@@ -38,9 +38,8 @@ var textureToShow0 = 0;
 // instantiate a texture loader
 var loader0 = new THREE.TextureLoader();
  	    	    
-      const anchor0 = mindarThree.addAnchor(0);
-     // var texture0 = loader.load(arr[textureToShow]); 
-      var texture0 = loader0 (arr0[textureToShow0]);
+      const anchor0 = mindarThree.addAnchor(0); 
+      var texture0 = loader0.load (arr0[textureToShow0]);
       var geometry0 = new THREE.PlaneGeometry(1, 1.7);
       var material0 = new THREE.MeshBasicMaterial({map: texture0});
       var plane0 = new THREE.Mesh(geometry0, material0);
@@ -86,20 +85,7 @@ var backButton0 = document.querySelector("#backButton");
 			})
 			document.getElementById("picno").innerHTML = textureToShow;
 		});
-	    
-     // const nextButton = document.querySelector("#nextButton");
-     // nextButton.addEventListener("click", () => {
-	//      textureToShow++;
-	//      if(textureToShow > arr.length-1) {
-//		  textureToShow = 0;
-   //   const texture0 = new THREE.TextureLoader().load(arr[textureToShow]);  
-   //   }
-   //  const backButton = document.querySelector("#backButton");
-  //    backButton.addEventListener("click", () => {
-//	textureToShow--;
-  // const texture0 = new THREE.TextureLoader().load(arr[textureToShow]);
-  //   });
-      
+
 	
 	    
 	    
@@ -118,6 +104,7 @@ var backButton0 = document.querySelector("#backButton");
 	  renderer.render(scene, camera);
 	});
       }
+      
       const startButton = document.querySelector("#startButton");
       startButton.addEventListener("click", () => {
 	start();
@@ -126,6 +113,8 @@ var backButton0 = document.querySelector("#backButton");
 	mindarThree.stop();
 	mindarThree.renderer.setAnimationLoop(null);
       });
+	    
+	    
     </script>
     <style>
 h1 {text-align: center;}
@@ -162,7 +151,7 @@ p {text-align: center;}
  </head>
   <body>
     
-    <h1 id="hahaha">Welc to the Campus Navigation System</h1> 
+    <h1 id="hahaha">Καλώς ήρθατε στο Σύστημα Πλοήγησης του Πανεπιστημίου</h1> 
    <p> Scan the building you want</p>
    <p> Pic <span id="picno">#</span></p>
 	  

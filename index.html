@@ -361,7 +361,7 @@ var backButton4 = document.querySelector("#backButton");
         //info_texnwn
       const anchor6 = mindarThree.addAnchor(6);
       const texture6 = new THREE.TextureLoader().load("assets/jpg/info/kthrio_texnwn.png");
-      const geometry6 = new THREE.PlaneGeometry(1, 0.55);
+      const geometry6 = new THREE.PlaneGeometry(1, 1);
       const material6 = new THREE.MeshBasicMaterial({map: texture6});
       const plane6 = new THREE.Mesh( geometry6, material6);
      anchor6.group.add(plane6);

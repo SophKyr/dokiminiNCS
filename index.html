@@ -350,14 +350,46 @@ var backButton4 = document.querySelector("#backButton");
 			document.getElementById("picno").innerHTML = textureToShow4;
 		}); 	    
 	    
-      //image 2
-     // const anchor1 = mindarThree.addAnchor(1);
-     // const texture1 = new THREE.TextureLoader().load("./assets/images/img2.jpg");
-     // const geometry1 = new THREE.PlaneGeometry(1, 0.55);
-    //  const material1 = new THREE.MeshBasicMaterial({map: texture1});
-    //  const plane1 = new THREE.Mesh( geometry1, material1);
-   //   anchor1.group.add(plane1);
-      //more images?
+        //info_Lesxi
+      const anchor5 = mindarThree.addAnchor(5);
+      const texture5 = new THREE.TextureLoader().load("assets/jpg/info/lesxh.png");
+      const geometry5 = new THREE.PlaneGeometry(1, 0.55);
+      const material5 = new THREE.MeshBasicMaterial({map: texture5});
+      const plane5 = new THREE.Mesh( geometry5, material5);
+     anchor5.group.add(plane5);
+ 
+        //info_texnwn
+      const anchor6 = mindarThree.addAnchor(6);
+      const texture6 = new THREE.TextureLoader().load("assets/jpg/info/kthrio_texnwn.png");
+      const geometry6 = new THREE.PlaneGeometry(1, 0.55);
+      const material6 = new THREE.MeshBasicMaterial({map: texture6});
+      const plane6 = new THREE.Mesh( geometry6, material6);
+     anchor6.group.add(plane6);
+	    
+        //info_aretaios
+      const anchor7 = mindarThree.addAnchor(7);
+      const texture7 = new THREE.TextureLoader().load("assets/jpg/info/kthro_aretaios.png");
+      const geometry7 = new THREE.PlaneGeometry(1, 0.55);
+      const material7 = new THREE.MeshBasicMaterial({map: texture7});
+      const plane7 = new THREE.Mesh( geometry7, material7);
+     anchor7.group.add(plane7);
+	    
+	 //info_ergastiria
+      const anchor8 = mindarThree.addAnchor(8);
+      const texture8 = new THREE.TextureLoader().load("assets/jpg/info/kthrio_grammateia_plhroforikhs.png");
+      const geometry8 = new THREE.PlaneGeometry(1, 0.55);
+      const material8 = new THREE.MeshBasicMaterial({map: texture8});
+      const plane8 = new THREE.Mesh( geometry8, material8);
+     anchor8.group.add(plane8);	    
+	    
+	  //info_metafrastiki
+      const anchor9 = mindarThree.addAnchor(9);
+      const texture9 = new THREE.TextureLoader().load("assets/jpg/info/kthrio_galhnos.png");
+      const geometry9 = new THREE.PlaneGeometry(1, 0.55);
+      const material9 = new THREE.MeshBasicMaterial({map: texture9});
+      const plane9 = new THREE.Mesh( geometry9, material9);
+     anchor9.group.add(plane9);
+	    
       
       const start = async() => {
 	await mindarThree.start();

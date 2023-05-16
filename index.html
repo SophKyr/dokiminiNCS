@@ -45,13 +45,13 @@ var loader0 = new THREE.TextureLoader();
       var plane0 = new THREE.Mesh(geometry0, material0);
        	    
 // Then load the texture
- var texture0 = loader0.load(arr0[textureToShow0], function(tex) {
+ //var texture0 = loader0.load(arr0[textureToShow0], function(tex) {
  // Once the texture has loaded
  // Asign it to the material
- material0.map = tex;
+// material0.map = tex;
  // Update the next texture to show
- textureToShow0++;
-});
+ //textureToShow0++;
+//});
   // Add the mesh into the scene
 anchor0.group.add(plane0);
  
@@ -67,7 +67,7 @@ var nextButton0 = document.querySelector("#nextButton");
 			textureToShow0 = 0;
   		}
  	});
-document.getElementById("picno").innerHTML = textureToShow0;
+//document.getElementById("picno").innerHTML = textureToShow0;
 //anchor0.group.add(plane0); 
 });
 	        
@@ -83,7 +83,7 @@ var backButton0 = document.querySelector("#backButton");
 			loader0.load(arr0[textureToShow0], function(tex) {
 				material0.map = tex;
 			})
-			document.getElementById("picno").innerHTML = textureToShow0;
+			//document.getElementById("picno").innerHTML = textureToShow0;
 		});
     
 	    
@@ -135,7 +135,7 @@ var nextButton1 = document.querySelector("#nextButton");
 			textureToShow1 = 0;
   		}
  	});
-document.getElementById("picno").innerHTML = textureToShow1;
+//document.getElementById("picno").innerHTML = textureToShow1;
 //anchor0.group.add(plane0); 
 });
 	        
@@ -151,7 +151,7 @@ var backButton1 = document.querySelector("#backButton");
 			loader1.load(arr1[textureToShow1], function(tex) {
 				material1.map = tex;
 			})
-			document.getElementById("picno").innerHTML = textureToShow1;
+			//document.getElementById("picno").innerHTML = textureToShow1;
 		});	    
 	    
 	    
@@ -201,7 +201,7 @@ var nextButton2 = document.querySelector("#nextButton");
 			textureToShow2 = 0;
   		}
  	});
-document.getElementById("picno").innerHTML = textureToShow2;
+//document.getElementById("picno").innerHTML = textureToShow2;
 //anchor0.group.add(plane0); 
 });
 	        
@@ -217,7 +217,7 @@ var backButton2 = document.querySelector("#backButton");
 			loader2.load(arr2[textureToShow2], function(tex) {
 				material2.map = tex;
 			})
-			document.getElementById("picno").innerHTML = textureToShow2;
+			//document.getElementById("picno").innerHTML = textureToShow2;
 		});	
 	    
 	   
@@ -270,7 +270,7 @@ var nextButton3 = document.querySelector("#nextButton");
 			textureToShow3 = 0;
   		}
  	});
-document.getElementById("picno").innerHTML = textureToShow3;
+//document.getElementById("picno").innerHTML = textureToShow3;
 //anchor0.group.add(plane0); 
 });
 	        
@@ -286,7 +286,7 @@ var backButton3 = document.querySelector("#backButton");
 			loader3.load(arr2[textureToShow3], function(tex) {
 				material3.map = tex;
 			})
-			document.getElementById("picno").innerHTML = textureToShow3;
+			//document.getElementById("picno").innerHTML = textureToShow3;
 		});    
 	    
 //Μεταφραστικό
@@ -331,7 +331,7 @@ var nextButton4 = document.querySelector("#nextButton");
 			textureToShow4 = 0;
   		}
  	});
-document.getElementById("picno").innerHTML = textureToShow4;
+//document.getElementById("picno").innerHTML = textureToShow4;
 //anchor0.group.add(plane0); 
 });
 	        
@@ -347,7 +347,7 @@ var backButton4 = document.querySelector("#backButton");
 			loader4.load(arr4[textureToShow4], function(tex) {
 				material4.map = tex;
 			})
-			document.getElementById("picno").innerHTML = textureToShow4;
+		//	document.getElementById("picno").innerHTML = textureToShow4;
 		}); 	    
 	    
         //info_Lesxi
@@ -358,9 +358,6 @@ var backButton4 = document.querySelector("#backButton");
       const plane5 = new THREE.Mesh( geometry5, material5);
      anchor5.group.add(plane5);
 	    
-	
-	    
- 
         //info_texnwn
       const anchor6 = mindarThree.addAnchor(6);
       const texture6 = new THREE.TextureLoader().load("assets/jpg/info/kthrio_texnwn.png");
@@ -391,9 +388,9 @@ var backButton4 = document.querySelector("#backButton");
       const geometry9 = new THREE.PlaneGeometry(1, 1);
       const material9 = new THREE.MeshBasicMaterial({map: texture9});
       const plane9 = new THREE.Mesh( geometry9, material9);
-     anchor9.group.add(plane9);
+      anchor9.group.add(plane9);
 	    
-      
+      //start-stop
       const start = async() => {
 	await mindarThree.start();
 	renderer.setAnimationLoop(() => {
@@ -406,21 +403,18 @@ var backButton4 = document.querySelector("#backButton");
 	start();
       });
 	    
-      const stoptButton = document.querySelector("#stopButton");    
+    //  const stoptButton = document.querySelector("#stopButton");    
       stopButton.addEventListener("click", () => {
 	      document.getElementById("hahaha").innerHTML = "Καλώς ήρθατε στο Σύστημα Πλοήγησης του Πανεπιστημίου";
 	      document.getElementById("second").innerHTML = "Σαρώστε το κτίριο που θέλετε";
 	mindarThree.stop();
-	renderer.setAnimationLoop(null);
-	      
+	mindarThree.renderer.setAnimationLoop(null);	      
 	      textureToShow0 = 0;
 	      textureToShow1 = 0;
 	      textureToShow2 = 0;
 	      textureToShow3 = 0;
-	      textureToShow4 = 0;
-	      
+	      textureToShow4 = 0;      
       });
-	    
 	    
     </script>
     <style>

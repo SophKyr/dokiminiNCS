@@ -22,6 +22,7 @@
 	imageTargetSrc: "assets/markers/markers.mind"
       });
       const {renderer, scene, camera} = mindarThree; 
+      var  title=0;
 	    
 //ΛΕΣΧΗ
 	    
@@ -39,7 +40,6 @@ var textureToShow0 = 0;
 var loader0 = new THREE.TextureLoader();
  	    	    
       const anchor0 = mindarThree.addAnchor(0); 
-      var  title0=0;
       var texture0 = loader0.load (arr0[textureToShow0]);
       var geometry0 = new THREE.PlaneGeometry(1, 1.7);
       var material0 = new THREE.MeshBasicMaterial({map: texture0});
@@ -56,12 +56,13 @@ var loader0 = new THREE.TextureLoader();
   // Add the mesh into the scene
 anchor0.group.add(plane0);
 	    
-	    if( title0=0;) {
-document.getElementById("hahaha").innerHTML = "Φοιτητική Λέσχη Ιονίου Πανεπιστημίου";
-	    };
+	   
 	    
 	    //nextButton	    
 var nextButton0 = document.querySelector("#nextButton"); 
+	     if( title=0;) {
+document.getElementById("hahaha").innerHTML = "Φοιτητική Λέσχη Ιονίου Πανεπιστημίου";
+	    };
 	nextButton0.addEventListener("click", function() {
 		
 		document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε";

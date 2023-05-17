@@ -56,12 +56,14 @@ var loader0 = new THREE.TextureLoader();
   // Add the mesh into the scene
 anchor0.group.add(plane0);
 	    
-	   
+if(title=0) {
+document.getElementById("hahaha").innerHTML = "Φοιτητική Λέσχη Ιονίου Πανεπιστημίου";
+}	   
 	    
 	    //nextButton	    
 var nextButton0 = document.querySelector("#nextButton");     
 	nextButton0.addEventListener("click", function() {
-		document.getElementById("hahaha").innerHTML = "Φοιτητική Λέσχη Ιονίου Πανεπιστημίου";
+		//document.getElementById("hahaha").innerHTML = "Φοιτητική Λέσχη Ιονίου Πανεπιστημίου";
 		document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε";
 		loader0.load(arr0[textureToShow0], function(tex) {
 		material0.map = tex;
@@ -470,7 +472,7 @@ p {text-align: center;}
 	  
   
    <p id="second"> Σαρώστε το κτίριο που θέλετε </p>	  
-   <p> Βήμα <span id="picno">#</span></p> 
+ <!--  <p> Βήμα <span id="picno">#</span></p> --> 
 
 	   
     <div id="control">

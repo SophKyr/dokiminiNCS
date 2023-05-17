@@ -59,11 +59,7 @@ anchor0.group.add(plane0);
 	   
 	    
 	    //nextButton	    
-var nextButton0 = document.querySelector("#nextButton0"); 
-	  
-	function toggleButton() {
-    document.getElementById("nextButton0").className = 'show'; 
-	    
+var nextButton0 = document.querySelector("#nextButton0");     
 	nextButton0.addEventListener("click", function() {
 		document.getElementById("hahaha").innerHTML = "Φοιτητική Λέσχη Ιονίου Πανεπιστημίου";
 		document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε";
@@ -77,7 +73,7 @@ var nextButton0 = document.querySelector("#nextButton0");
 document.getElementById("picno").innerHTML = textureToShow0;
 //anchor0.group.add(plane0); 
 });
-};    
+    
 	    
 //backButton	    
 var backButton0 = document.querySelector("#backButton");
@@ -132,11 +128,7 @@ var loader1 = new THREE.TextureLoader();
 anchor1.group.add(plane1);
 
 	    //nextButton	    
-var nextButton1 = document.querySelector("#nextButton1"); 
-	  
-	    function toggleButton() {
-    document.getElementById("nextButton1").className = 'show'; 
-	    
+var nextButton1 = document.querySelector("#nextButton1"); 	     
 	nextButton1.addEventListener("click", function() {
 		document.getElementById("hahaha").innerHTML = "Τμήμα Τεχνών Ήχου και Εικόνας - Γραμματεία";
 		document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε";
@@ -150,7 +142,7 @@ var nextButton1 = document.querySelector("#nextButton1");
 document.getElementById("picno").innerHTML = textureToShow1;
 //anchor0.group.add(plane0); 
 });
-};	
+	
 	    
 //backButton	    
 var backButton1 = document.querySelector("#backButton");
@@ -203,10 +195,7 @@ var loader2 = new THREE.TextureLoader();
 anchor2.group.add(plane2);
 
 	    //nextButton	    
-var nextButton2 = document.querySelector("#nextButton2"); 
-	    
-	    function toggleButton() {
-    document.getElementById("nextButton2").className = 'show'; 
+var nextButton2 = document.querySelector("#nextButton2"); 	    	    
 	nextButton2.addEventListener("click", function() {
 		document.getElementById("hahaha").innerHTML = " Κτήριο Αρεταίος- Τμήμα Πληροφορικής";
 		document.getElementById("second").innerHTML ="Παρακαλώ Περιμένετε";
@@ -219,8 +208,8 @@ var nextButton2 = document.querySelector("#nextButton2");
  	})
 document.getElementById("picno").innerHTML = textureToShow2;
 //anchor0.group.add(plane0); 
-})
-	    };
+});
+	  
 	        
 //backButton	    
 var backButton2 = document.querySelector("#backButton");
@@ -276,10 +265,7 @@ var loader3 = new THREE.TextureLoader();
 anchor3.group.add(plane3);
 
 	    //nextButton	    
-var nextButton3 = document.querySelector("#nextButton3"); 
-	    
-	    function toggleButton() {
-    document.getElementById("nextButton3").className = 'show'; 
+var nextButton3 = document.querySelector("#nextButton3"); 	  	
 	nextButton3.addEventListener("click", function() {
 		document.getElementById("hahaha").innerHTML = "Γραμματεία Πληροφορικής- Εργαστήρια";
 		document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε"; 
@@ -292,8 +278,8 @@ var nextButton3 = document.querySelector("#nextButton3");
  	})
 //document.getElementById("picno").innerHTML = textureToShow3;
 //anchor0.group.add(plane0); 
-})
-	    };
+});
+	   
 	        
 //backButton	    
 var backButton3 = document.querySelector("#backButton");
@@ -341,11 +327,7 @@ var loader4 = new THREE.TextureLoader();
 anchor4.group.add(plane4);
 
 	    //nextButton	    
-var nextButton4 = document.querySelector("#nextButton4"); 
-	    
-	    function toggleButton() {
-    document.getElementById("nextButton0").className = 'show'; 
-	    
+var nextButton4 = document.querySelector("#nextButton4"); 	    	    
 	nextButton4.addEventListener("click", function() {
 		//document.getElementById("hahaha").innerHTML = "Κτήριο Γαληνός- Τμήμα Ξένων γλωσσών, Μετάφρασης και Διερμηνείας";
 		document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε4";
@@ -358,8 +340,8 @@ var nextButton4 = document.querySelector("#nextButton4");
  	})
 //document.getElementById("picno").innerHTML = textureToShow4;
 //anchor0.group.add(plane0); 
-})
-	    };
+});
+	   
 	        
 //backButton	    
 var backButton4 = document.querySelector("#backButton");
@@ -451,12 +433,6 @@ p {text-align: center;}
 	margin: 0;
       }
 	    
-	.hidden {
-    display: none;
-	}
-	.show {
-   display: inline;
-	}
     
       #container {
 	width: 100vw;
@@ -470,7 +446,36 @@ p {text-align: center;}
 	left: 0;
 	z-index: 2;
       }
-	    #next {
+	    #next0 {
+	position: fixed;
+	top: 500;
+	right: 10;
+	z-index: 2;
+	    }
+	    
+	     #next1 {
+	position: fixed;
+	top: 500;
+	right: 10;
+	z-index: 2;
+	    }
+	    
+	     #next2 {
+	position: fixed;
+	top: 500;
+	right: 10;
+	z-index: 2;
+	    }
+	    
+	     #next3 {
+	position: fixed;
+	top: 500;
+	right: 10;
+	z-index: 2;
+	    }
+	    
+	    
+	    #next4 {
 	position: fixed;
 	top: 500;
 	right: 10;
@@ -503,20 +508,20 @@ p {text-align: center;}
     <div id="container">
     </div>
 	  
-	<div id="next">
-<button id="nextButton0" class="hidden">Next</button>
+	<div id="next0">
+<button id="nextButton0">Next</button>
 </div>
 	  
-	  <div id="next">
+	  <div id="next1">
 <button id="nextButton1">Next</button>
 </div>
-	  <div id="next">
+	  <div id="next2">
 <button id="nextButton2">Next</button>
 </div>
-	  <div id="next">
+	  <div id="next3">
 <button id="nextButton3">Next</button>
 </div>
-	  <div id="next">
+	  <div id="next4">
 <button id="nextButton4">Next</button>
 </div>
 	  

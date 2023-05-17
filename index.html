@@ -133,6 +133,10 @@ anchor1.group.add(plane1);
 
 	    //nextButton	    
 var nextButton1 = document.querySelector("#nextButton1"); 
+	  
+	    function toggleButton() {
+    document.getElementById("nextButton1").className = 'show'; 
+	    
 	nextButton1.addEventListener("click", function() {
 		document.getElementById("hahaha").innerHTML = "Τμήμα Τεχνών Ήχου και Εικόνας - Γραμματεία";
 		document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε";
@@ -145,8 +149,9 @@ var nextButton1 = document.querySelector("#nextButton1");
  	})
 document.getElementById("picno").innerHTML = textureToShow1;
 //anchor0.group.add(plane0); 
-});
-	        
+})
+};	
+	    
 //backButton	    
 var backButton1 = document.querySelector("#backButton");
 	backButton1.addEventListener("click", () => {
@@ -199,6 +204,9 @@ anchor2.group.add(plane2);
 
 	    //nextButton	    
 var nextButton2 = document.querySelector("#nextButton2"); 
+	    
+	    function toggleButton() {
+    document.getElementById("nextButton2").className = 'show'; 
 	nextButton2.addEventListener("click", function() {
 		document.getElementById("hahaha").innerHTML = " Κτήριο Αρεταίος- Τμήμα Πληροφορικής";
 		document.getElementById("second").innerHTML ="Παρακαλώ Περιμένετε";
@@ -211,7 +219,8 @@ var nextButton2 = document.querySelector("#nextButton2");
  	})
 document.getElementById("picno").innerHTML = textureToShow2;
 //anchor0.group.add(plane0); 
-});
+})
+	    };
 	        
 //backButton	    
 var backButton2 = document.querySelector("#backButton");
@@ -268,6 +277,9 @@ anchor3.group.add(plane3);
 
 	    //nextButton	    
 var nextButton3 = document.querySelector("#nextButton3"); 
+	    
+	    function toggleButton() {
+    document.getElementById("nextButton3").className = 'show'; 
 	nextButton3.addEventListener("click", function() {
 		document.getElementById("hahaha").innerHTML = "Γραμματεία Πληροφορικής- Εργαστήρια";
 		document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε"; 
@@ -280,7 +292,8 @@ var nextButton3 = document.querySelector("#nextButton3");
  	})
 //document.getElementById("picno").innerHTML = textureToShow3;
 //anchor0.group.add(plane0); 
-});
+})
+	    };
 	        
 //backButton	    
 var backButton3 = document.querySelector("#backButton");
@@ -329,6 +342,10 @@ anchor4.group.add(plane4);
 
 	    //nextButton	    
 var nextButton4 = document.querySelector("#nextButton4"); 
+	    
+	    function toggleButton() {
+    document.getElementById("nextButton0").className = 'show'; 
+	    
 	nextButton4.addEventListener("click", function() {
 		//document.getElementById("hahaha").innerHTML = "Κτήριο Γαληνός- Τμήμα Ξένων γλωσσών, Μετάφρασης και Διερμηνείας";
 		document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε4";
@@ -341,7 +358,8 @@ var nextButton4 = document.querySelector("#nextButton4");
  	})
 //document.getElementById("picno").innerHTML = textureToShow4;
 //anchor0.group.add(plane0); 
-});
+})
+	    };
 	        
 //backButton	    
 var backButton4 = document.querySelector("#backButton");

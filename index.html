@@ -59,8 +59,8 @@ anchor0.group.add(plane0);
    
 	    
 	    //nextButton	    
-var nextButton0 = document.querySelector("#nextButton");     
-	nextButton0.addEventListener("click", function() {
+var nextButton = document.querySelector("#nextButton");     
+	nextButton.addEventListener("click", function() {
 		document.getElementById("second").innerHTML = "Φοιτητική Λέσχη Ιονίου Πανεπιστημίου";
 		document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε";
 		loader0.load(arr0[textureToShow0], function(tex) {
@@ -128,10 +128,10 @@ var loader1 = new THREE.TextureLoader();
 anchor1.group.add(plane1);
 
 	    //nextButton	    
-var nextButton1 = document.querySelector("#nextButton"); 	     
-	nextButton1.addEventListener("click", function() {
-		document.getElementById("hahaha").innerHTML = "Τμήμα Τεχνών Ήχου και Εικόνας - Γραμματεία";
-		document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε";
+var nextButton = document.querySelector("#nextButton"); 	     
+	nextButton.addEventListener("click", function() {
+		//document.getElementById("hahaha").innerHTML = "Τμήμα Τεχνών Ήχου και Εικόνας - Γραμματεία";
+		//document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε";
 		loader1.load(arr1[textureToShow1], function(tex) {
 		material1.map = tex;
 		textureToShow1++;
@@ -194,10 +194,10 @@ var loader2 = new THREE.TextureLoader();
 anchor2.group.add(plane2);
 
 	    //nextButton	    
-var nextButton2 = document.querySelector("#nextButton"); 	    	    
-	nextButton2.addEventListener("click", function() {
-		document.getElementById("hahaha").innerHTML = " Κτήριο Αρεταίος- Τμήμα Πληροφορικής";
-		document.getElementById("second").innerHTML ="Παρακαλώ Περιμένετε";
+var nextButton = document.querySelector("#nextButton"); 	    	    
+	nextButton.addEventListener("click", function() {
+		//document.getElementById("hahaha").innerHTML = " Κτήριο Αρεταίος- Τμήμα Πληροφορικής";
+		//document.getElementById("second").innerHTML ="Παρακαλώ Περιμένετε";
 		loader2.load(arr2[textureToShow2], function(tex) {
 		material2.map = tex;
 		textureToShow2++;
@@ -263,10 +263,10 @@ var loader3 = new THREE.TextureLoader();
 anchor3.group.add(plane3);
 
 	    //nextButton	    
-var nextButton3 = document.querySelector("#nextButton"); 	  	
-	nextButton3.addEventListener("click", function() {
-		document.getElementById("hahaha").innerHTML = "Γραμματεία Πληροφορικής- Εργαστήρια";
-		document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε"; 
+var nextButton = document.querySelector("#nextButton"); 	  	
+	nextButton.addEventListener("click", function() {
+		//document.getElementById("hahaha").innerHTML = "Γραμματεία Πληροφορικής- Εργαστήρια";
+		//document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε"; 
 		loader3.load(arr3[textureToShow3], function(tex) {
 		material3.map = tex;
 		textureToShow3++;
@@ -324,10 +324,10 @@ var loader4 = new THREE.TextureLoader();
 anchor4.group.add(plane4);
 
 	    //nextButton	    
-var nextButton4 = document.querySelector("#nextButton"); 	    	    
-	nextButton4.addEventListener("click", function() {
-		document.getElementById("hahaha").innerHTML = "Κτήριο Γαληνός- Τμήμα Ξένων γλωσσών, Μετάφρασης και Διερμηνείας";
-		document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε4";
+var nextButton = document.querySelector("#nextButton"); 	    	    
+	nextButton.addEventListener("click", function() {
+		//document.getElementById("hahaha").innerHTML = "Κτήριο Γαληνός- Τμήμα Ξένων γλωσσών, Μετάφρασης και Διερμηνείας";
+		//document.getElementById("second").innerHTML = "Παρακαλώ Περιμένετε4";
 		loader4.load(arr4[textureToShow4], function(tex) {
 		material4.map = tex;
 		textureToShow4++;
